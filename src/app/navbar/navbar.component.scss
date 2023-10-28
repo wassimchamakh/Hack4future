@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+nav {
+    background-color: $third-color;
+    border-bottom: 5px solid $fourth;
+    .auth{
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+}
