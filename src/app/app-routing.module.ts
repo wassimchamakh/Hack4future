@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeStudentComponent } from './home-student/home-student.component';
+import { OrientationComponent } from './orientation/orientation.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,9 @@ const routes: Routes = [
   {
     path: 'student/home',
     component: HomeStudentComponent
-  }
+  },
+  {path:'student/test',
+component : OrientationComponent}
 ];
 
 @NgModule({

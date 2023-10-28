@@ -101,6 +101,7 @@ import { HomeStudentComponent } from './home-student/home-student.component';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.component';
+import { OrientationComponent } from './orientation/orientation.component';
 
 @NgModule({
   declarations: [
@@ -112,6 +113,7 @@ import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.
     NavbarComponent,
     HomeStudentComponent,
     StudentSideMenuComponent,
+    OrientationComponent,
   ],
   imports: [
     InputTextModule,
