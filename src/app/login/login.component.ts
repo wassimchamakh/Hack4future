@@ -9,5 +9,7 @@ import { Button } from 'primeng/button';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  valCheck: string[] = ['remember'];
 
+  password!: string;
 }
