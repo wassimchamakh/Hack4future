@@ -8,3 +8,29 @@ h1 {
     left: 50%;
     font-weight: bolder;
 }
+
+footer {
+    background-color: rgb(46, 45, 45);
+
+    #contact{
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 50% !important;
+        padding: 20px 0;
+        .input-group{
+            border-radius: 5px;
+            margin-bottom: 2px;
+            background-color: white;
+        }
+        .textarea{
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 80px;
+        }
+    }
+
+}

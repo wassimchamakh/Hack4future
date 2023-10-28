@@ -41,7 +41,6 @@ import { GalleriaModule } from 'primeng/galleria';
 import { InplaceModule } from 'primeng/inplace';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputSwitchModule } from 'primeng/inputswitch';
-import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ImageModule } from 'primeng/image';
@@ -58,11 +57,9 @@ import { OrganizationChartModule } from 'primeng/organizationchart';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { PaginatorModule } from 'primeng/paginator';
 import { PanelModule } from 'primeng/panel';
-import { PanelMenuModule } from 'primeng/panelmenu';
 import { PasswordModule } from 'primeng/password';
 import { PickListModule } from 'primeng/picklist';
 import { ProgressBarModule } from 'primeng/progressbar';
-import { RadioButtonModule } from 'primeng/radiobutton';
 import { RatingModule } from 'primeng/rating';
 import { ScrollerModule } from 'primeng/scroller';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
@@ -98,6 +95,11 @@ import { BlockUIModule } from 'primeng/blockui';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { HomeStudentComponent } from './home-student/home-student.component';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -105,9 +107,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomePageComponent,
     LoginComponent,
     NavbarComponent,
-    SignUpComponent
+    SignUpComponent,
+    NavbarComponent,
+    HomeStudentComponent,
   ],
   imports: [
+    InputTextModule,
+    CheckboxModule,
+    RadioButtonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -204,6 +211,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TreeTableModule,
     AnimateModule,
     CardModule,
+    PanelMenuModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

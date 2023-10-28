@@ -4,6 +4,7 @@ nav {
     background-color: $third-color;
     border-bottom: 5px solid $fourth;
     .auth{
+        margin-right: 10px;
         border: 1px solid white;
         border-radius: 5px;
         padding: 10px;
@@ -14,4 +15,8 @@ nav {
         }
     }
 
+    .elements-navbar{
+        margin: 0 auto;
+        font-size: medium;
+    }
 }
