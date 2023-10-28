@@ -100,6 +100,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.component';
 
 @NgModule({
   declarations: [
@@ -110,6 +111,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     SignUpComponent,
     NavbarComponent,
     HomeStudentComponent,
+    StudentSideMenuComponent,
   ],
   imports: [
     InputTextModule,
@@ -213,6 +215,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     CardModule,
     PanelMenuModule,
     FullCalendarModule
+  ],
+  exports: [
+    StudentSideMenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
