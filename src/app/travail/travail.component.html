@@ -1,0 +1,97 @@
+
+<div class="grid">
+    <app-student-side-menu></app-student-side-menu>
+<div class="card col dataview">
+    <div class="dataview">
+        <p-dataView #dv [value]="products" [rows]="4" [paginator]="true">
+            
+            <ng-template let-product pTemplate="listItem">
+                <div class="col-12">
+                    <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
+                        <div class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
+                            <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                                <div class="text-2xl font-bold text-900">{{ product.name }}</div>
+                                <div class="flex align-items-center gap-3">
+                                    <span class="flex align-items-center gap-2">
+                                        <i class="pi pi-tag"></i>
+                                        <span class="font-semibold">{{ product.category }}</span>
+                                    </span>
+                                    <p-tag [value]="product.inventoryStatus" [severity]="getSeverity()"></p-tag>
+                                </div>
+                            </div>
+                            <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
+                                <span class="text-2xl font-semibold">{{ 'date limit : ' + product.price }}</span>
+
+                                <button pButton pRipple label="Démarrer" class="md:align-self-end mb-2" icon="pi pi-play" [disabled]="product.inventoryStatus === 'INDISPONIBLE'" (click)="demarrer(product.id)"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+    </div>
+</div>
+</div>
+
+<p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}">
+    <div *ngIf="counterValue <4">
+        <h2>Le test va commencer en quelque seconde</h2>
+        <mat-spinner ></mat-spinner>
+    </div>
+
+    <div *ngIf="counterValue>4">
+      
+
+    
+        <mat-stepper linear #stepper>
+            <mat-step  [editable]="false">
+                <ng-template matStepLabel>Question 1: option?</ng-template>
+                <div >
+                    <h4>Question 1: option?</h4>
+                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid"   [(ngModel)]="rep1">
+                        >
+                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="{{rep.id}}">{{rep.rep}}</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step  [editable]="false">
+                <ng-template matStepLabel>Question 2: options wich one?</ng-template>
+                <div >
+                    <h4>Question 1: option?</h4>
+                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid"   [(ngModel)]="rep2">
+                        >
+                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="{{rep.id}}">{{rep.rep}}</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Done</ng-template>
+              <p>Test terminé</p>
+              <button mat-button (click)="getResult()">resultat</button>
+              <div *ngIf="resultVisibile">
+                <mat-progress-spinner
+                class="example-margin"
+                [color]="color"
+                [mode]="mode"
+                [value]="result">
+            </mat-progress-spinner>
+            <h3>vous avez comme resultat: {{result}}</h3> 
+              </div>
+
+              <div>
+                <button mat-button (click)="close()">Close</button>
+              </div>
+            </mat-step>
+          </mat-stepper>
+    
+    </div>
+    
+
+</p-dialog>

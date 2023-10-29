@@ -71,4 +71,9 @@ export class EnseignantHomePageComponent {
   showListeEtudiant(){
     this.visibleListe=! this.visibleListe
   }
+
+  sendPresence(){
+    this.visibleListe=!this.visibleListe
+    this.visible=!this.visible
+  }
 }

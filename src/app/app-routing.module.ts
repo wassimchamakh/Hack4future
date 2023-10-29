@@ -8,7 +8,9 @@ import { OrientationComponent } from './orientation/orientation.component';
 import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
+import { TravailComponent } from './travail/travail.component';
 import { EnseignantHomePageComponent } from './enseignant-home-page/enseignant-home-page.component';
+import { NotesComponent } from './enseignant/notes/notes.component';
 
 const routes: Routes = [
   {
@@ -40,8 +42,14 @@ component : OrientationComponent},
     component: StudentTestOrientationComponent 
   },
   {
-    path:'enseignant/home',
+    path:'student/travail',
+    component: TravailComponent},
+    {path:'enseignant/home',
     component:EnseignantHomePageComponent
+  }, 
+  {
+    path:'enseignant/notes' , 
+    component:NotesComponent
   }
 
 ];

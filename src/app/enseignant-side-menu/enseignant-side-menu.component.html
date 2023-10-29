@@ -8,7 +8,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a [routerLink]="['/student/home']" class="nav-link text-white " aria-current="page">
+            <a [routerLink]="['/enseignant/home']" class="nav-link text-white {{activeRoute=='enseignant/home'?classActive:''}}" aria-current="page">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#home"></use>
                 </svg>
@@ -32,11 +32,11 @@
             </div>
           </li>
         <li>
-            <a [routerLink]="['/student/evaluation']" class="nav-link text-white ">
+            <a [routerLink]="['/enseignant/notes']" class="nav-link text-white  {{activeRoute=='student/travail'?classActive:''}}">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#table"></use>
                 </svg>
-                Evaluation Cours 
+                Notes
             </a>
         </li>
         <li>

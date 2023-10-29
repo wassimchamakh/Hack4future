@@ -113,9 +113,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
+import { TravailComponent } from './travail/travail.component';
 import { EnseignantHomePageComponent } from './enseignant-home-page/enseignant-home-page.component';
 import { EnseignantSideMenuComponent } from './enseignant-side-menu/enseignant-side-menu.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { NotesComponent } from './enseignant/notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -131,8 +133,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     StudentOrientationFormComponent,
     EvaluationComponent,
     StudentTestOrientationComponent,
+    TravailComponent,
     EnseignantHomePageComponent,
     EnseignantSideMenuComponent,
+    NotesComponent,
   ],
   imports: [
     InputTextModule,
