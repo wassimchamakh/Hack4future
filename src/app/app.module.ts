@@ -116,6 +116,7 @@ import { StudentTestOrientationComponent } from './student-test-orientation/stud
 import { TravailComponent } from './travail/travail.component';
 import { EnseignantHomePageComponent } from './enseignant-home-page/enseignant-home-page.component';
 import { EnseignantSideMenuComponent } from './enseignant-side-menu/enseignant-side-menu.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NotesComponent } from './enseignant/notes/notes.component';
 
 @NgModule({
@@ -250,7 +251,8 @@ import { NotesComponent } from './enseignant/notes/notes.component';
     MatProgressSpinnerModule,
     MatRadioModule,
     MatStepperModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   exports: [
     StudentSideMenuComponent,

@@ -26,8 +26,35 @@ export class EnseignantHomePageComponent {
       right: 'timeGridWeek,timeGridDay' // user can switch between the two
     }
   };
+  listeEtudiant:any[]=[
+    {
+      id:1,
+      name:'Etudiant aa'
+    },
+    {
+      id:2,
+      name:'Etudiant ds'
+    },
+    {
+      id:3,
+      name:'Etudiant ik'
+    },
+    {
+      id:4,
+      name:'Etudiant a'
+    },
+    {
+      id:5,
+      name:'Etudiant e'
+    },
+    {
+      id:6,
+      name:'Etudiant d'
+    },
+  ]
   visible:boolean=false
   event:any
+  visibleListe:boolean=false
   constructor(){}
   handleDateClick(info:any) {
     this.event=info
@@ -39,5 +66,14 @@ export class EnseignantHomePageComponent {
   marquerAbsent(){
     this.event.event.setProp('backgroundColor','red')
     this.visible = ! this.visible
+  }
+
+  showListeEtudiant(){
+    this.visibleListe=! this.visibleListe
+  }
+
+  sendPresence(){
+    this.visibleListe=!this.visibleListe
+    this.visible=!this.visible
   }
 }

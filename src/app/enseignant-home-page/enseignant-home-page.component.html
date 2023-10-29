@@ -19,6 +19,20 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
 <p-dialog header="Choisir une option" [(visible)]="visible" [style]="{width: '50vw'}">
     <p-button label="Absent" severity="danger" (click)="marquerAbsent()"></p-button>
-    <p-button label="Presence etudiant" severity="info"></p-button>
+    <p-button label="Presence etudiant" severity="info" (click)="showListeEtudiant()"></p-button>
+
+</p-dialog>
+
+<p-dialog header="Liste etudiant" [(visible)]="visibleListe" [style]="{width: '50vw'}">
+    <ol>
+        <li *ngFor="let etud of listeEtudiant">{{etud.name}}: 
+            <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Présent</mat-radio-button>
+            <mat-radio-button value="2">Absent</mat-radio-button>
+          </mat-radio-group>
+        </li>
+        
+    </ol>
+    <p-button label="Send" class="send-presence" (click)="sendPresence()"></p-button>
 
 </p-dialog>
