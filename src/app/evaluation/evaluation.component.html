@@ -1,0 +1,38 @@
+<div class="grid">
+    <app-student-side-menu></app-student-side-menu>
+    <div class="col">
+      <mat-card>
+        <mat-card-title>Evaluate Course Subject</mat-card-title>
+        <mat-card-content>
+          <mat-form-field>
+            <mat-label>Select Subject</mat-label>
+            <mat-select [(ngModel)]="selectedSubject">
+              <mat-option *ngFor="let subject of subjects" [value]="subject">{{ subject }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+      
+      <!-- Add the missing closing div tag here if needed -->
+      
+      <div *ngIf="selectedSubject ">
+        <mat-card-title>{{selectedSubject}}</mat-card-title>
+        <mat-card>
+          <mat-card-content>
+            <!-- Iterate through questions and display them -->
+            <div *ngFor="let question of questions">
+              <p>{{ question }}</p>
+              <mat-radio-group [(ngModel)]="questionResponses[question]">
+                <mat-radio-button [value]="'1'">Pas satisfaisante</mat-radio-button>
+                <mat-radio-button [value]="'2'">Peu satisfaisante</mat-radio-button>
+                <mat-radio-button [value]="'3'">Satisfaisante</mat-radio-button>
+                <mat-radio-button [value]="'4'">Très satisfaisante</mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

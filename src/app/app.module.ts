@@ -104,6 +104,11 @@ import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.
 import { OrientationComponent } from './orientation/orientation.component';
 import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
 import {MatCardModule} from '@angular/material/card';
+import { EvaluationComponent } from './evaluation/evaluation.component';
+import { MatFormFieldModule } from '@angular/material/form-field'; // Add this line
+import { MatInputModule } from '@angular/material/input'; // If you are using mat-input
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -116,6 +121,7 @@ import {MatCardModule} from '@angular/material/card';
     StudentSideMenuComponent,
     OrientationComponent,
     StudentOrientationFormComponent,
+    EvaluationComponent,
   ],
   imports: [
     InputTextModule,
@@ -223,7 +229,11 @@ import {MatCardModule} from '@angular/material/card';
     DropdownModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastModule
+    ToastModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule
   ],
   exports: [
     StudentSideMenuComponent
