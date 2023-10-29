@@ -19,9 +19,9 @@ export class StudentTestOrientationComponent {
       {
           id: '1000',
           code: 'f230fh0g3',
-          name: 'Lettre',
+          name: 'Economie et Gestion',
           description: 'Product Description',
-          image: 'la-physique.png',
+          image: 'economie.png',
           inventoryStatus: 'DISPONIBLE',
          
       },
@@ -30,7 +30,7 @@ export class StudentTestOrientationComponent {
           code: 'nvklal433',
           name: 'Science Informatique',
           description: 'Product Description',
-          image: 'france.png',
+          image: 'la-programmation.png',
           inventoryStatus: 'INDISPONIBLE',
          
       },
@@ -39,7 +39,7 @@ export class StudentTestOrientationComponent {
           code: 'zz21cz3c1',
           name: 'Science',
           description: 'Product Description',
-          image: 'langue-anglaise.png',
+          image: 'la-physique.png',
           inventoryStatus: 'DISPONIBLE',
       },
       {
@@ -47,9 +47,9 @@ export class StudentTestOrientationComponent {
           code: '244wgerg2',
           name: 'Technique',
           description: 'Product Description',
-          image: '',
+          image: 'technique.png',
           price: 29,
-          category: 'Clothing',
+          category: 'technique.png',
           quantity: 25,
           inventoryStatus: 'DISPONIBLE',
           rating: 5
@@ -70,7 +70,7 @@ export class StudentTestOrientationComponent {
           id: '1005',
           code: 'av2231fwg',
           name: 'Brown Purse',
-          description: 'Economie et Gestion',
+          description: 'Lettre',
           image: 'brown-purse.jpg',
           price: 120,
           category: 'Accessories',
