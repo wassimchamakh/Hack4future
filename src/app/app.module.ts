@@ -109,6 +109,9 @@ import { MatFormFieldModule } from '@angular/material/form-field'; // Add this l
 import { MatInputModule } from '@angular/material/input'; // If you are using mat-input
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -122,6 +125,7 @@ import { MatRadioModule } from '@angular/material/radio';
     OrientationComponent,
     StudentOrientationFormComponent,
     EvaluationComponent,
+    StudentTestOrientationComponent,
   ],
   imports: [
     InputTextModule,
@@ -233,6 +237,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
     MatRadioModule
   ],
   exports: [

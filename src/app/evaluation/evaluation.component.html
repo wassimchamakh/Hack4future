@@ -1,3 +1,5 @@
+<p-toast></p-toast>
+
 <div class="grid">
     <app-student-side-menu></app-student-side-menu>
     <div class="col">
@@ -29,7 +31,7 @@
                 <mat-radio-button [value]="'4'">Très satisfaisante</mat-radio-button>
               </mat-radio-group>
             </div>
-
+            <button type="button" class="btn btn-primary Send" (click)="send()">Send</button>
           </mat-card-content>
         </mat-card>
       </div>

@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 
 @Component({
   selector: 'app-evaluation',
   templateUrl: './evaluation.component.html',
-  styleUrls: ['./evaluation.component.scss']
+  styleUrls: ['./evaluation.component.scss'],
+  providers: [MessageService] 
 })
 
 
-export class EvaluationComponent {
+export class EvaluationComponent implements OnInit {
   selectedSubject!: string;
   questionResponses: { [question: string]: string } = {};  
   subjects: string[] = ['Math', 'Science', 'History'];
@@ -21,4 +23,13 @@ export class EvaluationComponent {
     'Question 5: L’ atteinte des acquis d’apprentissage (maîtrise des acquis énoncés dans la fiche module) est',
     'Question 6: La disponibilité des ressources pédagogiques  sur classroom (support de cours) est'
   ]
+  constructor(private messageService: MessageService) {}
+  ngOnInit(): void {
+    
+  }
+  send(){
+    console.log("test");
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'votre evaluation du cours a été envoyée avec succés' });
+
+  }
 }

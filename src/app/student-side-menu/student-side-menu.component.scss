@@ -11,3 +11,12 @@
     color: #fff; /* Text color in the side menu */
     position: fixed; /* Fixed positioning so it stays visible while scrolling */
 }
+
+li:hover{
+    cursor: pointer;
+}
+.collapse{
+   li{
+    margin-bottom: 5%;
+   }
+}
