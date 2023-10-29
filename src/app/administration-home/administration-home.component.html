@@ -1,0 +1,38 @@
+<div class="grid">
+    <app-admin-side-menu></app-admin-side-menu>
+    <div  class="col grid">
+        <div class="col">
+            <div class="cards grid">
+                <label class="col-12">Nombre d'etudiant</label>
+                <div>
+                    <i class="pi pi-user" style="color: #ffffff"></i>
+                    <label> 53</label>
+                </div>
+    
+            </div>
+    
+            <div class="cards grid">
+                <label class="col-12">Nombre de profs</label>
+                <div>
+                    <i class="pi pi-user" style="color: #ffffff"></i>
+                    <label> 25</label>
+                </div>
+    
+            </div>
+            <div class="cards grid">
+                <label class="col-12">Nombre de section</label>
+                <div>
+                    <i class="pi pi-book" style="color: #ffffff"></i>
+                    <label> 4</label>
+                </div>
+    
+            </div>
+    
+        </div>
+        <div class="card col chart">
+            <h4>Nombre de succès dans les tests</h4>
+            <p-chart type="line" [data]="data" [options]="options"></p-chart>
+        </div>
+    </div>
+
+</div>

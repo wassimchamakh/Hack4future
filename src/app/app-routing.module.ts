@@ -11,6 +11,8 @@ import { StudentTestOrientationComponent } from './student-test-orientation/stud
 import { TravailComponent } from './travail/travail.component';
 import { EnseignantHomePageComponent } from './enseignant-home-page/enseignant-home-page.component';
 import { NotesComponent } from './enseignant/notes/notes.component';
+import { AdministrationHomeComponent } from './administration-home/administration-home.component';
+import { AdministrationCalendrierComponent } from './administration-calendrier/administration-calendrier.component';
 
 const routes: Routes = [
   {
@@ -50,6 +52,14 @@ component : OrientationComponent},
   {
     path:'enseignant/notes' , 
     component:NotesComponent
+  },
+  {
+    path:'administration/home',
+    component:AdministrationHomeComponent
+  },
+  {
+    path:'administration/calendrier',
+    component:AdministrationCalendrierComponent
   }
 
 ];

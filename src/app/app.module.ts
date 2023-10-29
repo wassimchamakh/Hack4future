@@ -118,6 +118,10 @@ import { EnseignantHomePageComponent } from './enseignant-home-page/enseignant-h
 import { EnseignantSideMenuComponent } from './enseignant-side-menu/enseignant-side-menu.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NotesComponent } from './enseignant/notes/notes.component';
+import { AdministrationHomeComponent } from './administration-home/administration-home.component';
+import { ChartModule } from 'primeng/chart';
+import { AdminSideMenuComponent } from './admin-side-menu/admin-side-menu.component';
+import { AdministrationCalendrierComponent } from './administration-calendrier/administration-calendrier.component';
 
 @NgModule({
   declarations: [
@@ -137,6 +141,9 @@ import { NotesComponent } from './enseignant/notes/notes.component';
     EnseignantHomePageComponent,
     EnseignantSideMenuComponent,
     NotesComponent,
+    AdministrationHomeComponent,
+    AdminSideMenuComponent,
+    AdministrationCalendrierComponent,
   ],
   imports: [
     InputTextModule,
@@ -252,11 +259,13 @@ import { NotesComponent } from './enseignant/notes/notes.component';
     MatRadioModule,
     MatStepperModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ChartModule
   ],
   exports: [
     StudentSideMenuComponent,
-    EnseignantSideMenuComponent
+    EnseignantSideMenuComponent,
+    AdminSideMenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,47 @@
+<script src='fullcalendar-scheduler/dist/index.global.js'></script>
+<script>
+var calendar = new FullCalendar.Calendar(calendarEl, {
+  initialView: 'resourceTimelineWeek',
+  resources: [
+    // your resource list
+  ]
+});
+</script>
+<div class="grid">
+    <app-admin-side-menu></app-admin-side-menu>
+    <div class="col">
+        <p-button label="Ajouter matière" class="add-matiere"></p-button>
+
+        <div class="calendar">
+            <full-calendar  [options]="calendarOptions"></full-calendar>
+        </div>
+    </div>
+</div>
+
+
+<p-dialog header="Choisir une option" [(visible)]="visible" [style]="{width: '50vw'}">
+    <div class="droplist">
+        <p-dropdown [options]="matiere" [(ngModel)]="selectedMatiere" placeholder="Selectionner matier" [group]="false">
+            <ng-template let-group pTemplate="matiere">
+                <div class="flex align-items-center">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'mr-2 flag flag-' + group.value" style="width: 20px" />
+                    <span>{{ group.label }}</span>
+                </div>
+            </ng-template>
+        </p-dropdown>
+    </div>
+    <div class="droplist">
+        <p-dropdown [options]="profs" [(ngModel)]="selectedProf" placeholder="Selectionner Prof" [group]="false">
+            <ng-template let-group pTemplate="matiere">
+                <div class="flex align-items-center">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'mr-2 flag flag-' + group.value" style="width: 20px" />
+                    <span>{{ group.label }}</span>
+                </div>
+            </ng-template>
+        </p-dropdown>
+    </div>
+    <p-button label="Send" class="send-presence" (click)="sendMatiere()"></p-button>
+
+
+</p-dialog>
+

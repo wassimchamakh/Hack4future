@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+.cards{
+    font-weight: bolder !important;
+    background-color: $first-color;
+    width: 20%;
+    height: 15%;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: medium;
+    margin-left: 10px;
+    div{
+        i{
+            margin-right: 10px;
+        }
+        display: inline-flex;
+    }
+}
+.chart{
+    text-align: center;
+}
