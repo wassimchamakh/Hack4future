@@ -114,6 +114,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
 import { TravailComponent } from './travail/travail.component';
+import { EnseignantHomePageComponent } from './enseignant-home-page/enseignant-home-page.component';
+import { EnseignantSideMenuComponent } from './enseignant-side-menu/enseignant-side-menu.component';
+import { NotesComponent } from './enseignant/notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -130,6 +133,9 @@ import { TravailComponent } from './travail/travail.component';
     EvaluationComponent,
     StudentTestOrientationComponent,
     TravailComponent,
+    EnseignantHomePageComponent,
+    EnseignantSideMenuComponent,
+    NotesComponent,
   ],
   imports: [
     InputTextModule,
@@ -247,7 +253,8 @@ import { TravailComponent } from './travail/travail.component';
     MatButtonModule
   ],
   exports: [
-    StudentSideMenuComponent
+    StudentSideMenuComponent,
+    EnseignantSideMenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
