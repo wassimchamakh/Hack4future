@@ -2,7 +2,31 @@
     <app-student-side-menu></app-student-side-menu>
     <div class="col">
         <div class="calendar">
-            <h1>here is my forùm</h1>
+            <h1>le formulaire sera rempli une seule fois et sera pas modifié</h1>
+            <mat-card>
+                <mat-card-content>
+                    <div class="grid form-orientation">
+                        <div class="col-12 grid">
+                            <label for="" class="col">Premier choix :</label><p-dropdown class="col" [options]="branche"
+                                [(ngModel)]="firstChoice" optionLabel="name"></p-dropdown>
+                        </div>
+                        <div class="col-12 grid">
+                            <label for="" class="col">Deuxiéme choix :</label><p-dropdown class="col" [options]="branche"
+                                [(ngModel)]="SecondChoice" optionLabel="name"></p-dropdown>
+                        </div>
+                        <div class="col-12 grid">
+                            <label for="" class="col">Troisiéme choix :</label><p-dropdown class="col" [options]="branche"
+                                [(ngModel)]="thirdChoice" optionLabel="name"></p-dropdown>
+                        </div>
+                        <div class="col-12 grid">
+                            <label for="" class="col">Quatriéme choix :</label><p-dropdown class="col" [options]="branche"
+                                [(ngModel)]="fourthChoice" optionLabel="name"></p-dropdown>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary Send" (click)="send()">Send</button>
+
+                </mat-card-content>
+            </mat-card>
         </div>
     </div>
 </div>

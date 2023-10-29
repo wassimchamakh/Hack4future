@@ -14,7 +14,10 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.component';
 import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
-
+import {MatCardModule} from '@angular/material/card';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,12 @@ import { StudentOrientationFormComponent } from './student-orientation-form/stud
     AppRoutingModule,
     BrowserAnimationsModule,
     PanelMenuModule,
-    FullCalendarModule
+    FullCalendarModule,
+    MatCardModule,
+    DropdownModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastModule
   ],
   exports: [
     StudentSideMenuComponent
