@@ -31,6 +31,13 @@
                 <mat-radio-button [value]="'4'">Très satisfaisante</mat-radio-button>
               </mat-radio-group>
             </div>
+            <div>
+              <mat-form-field class="example-full-width">
+                <mat-label>Votre commentaire</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+              </mat-form-field>
+            </div>
+
             <button type="button" class="btn btn-primary Send" (click)="send()">Send</button>
           </mat-card-content>
         </mat-card>

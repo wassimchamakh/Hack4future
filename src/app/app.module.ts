@@ -110,6 +110,8 @@ import { MatInputModule } from '@angular/material/input'; // If you are using ma
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatButtonModule} from '@angular/material/button';
 import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
 
 @NgModule({
@@ -238,7 +240,9 @@ import { StudentTestOrientationComponent } from './student-test-orientation/stud
     MatInputModule,
     MatSelectModule,
     MatProgressSpinnerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatStepperModule,
+    MatButtonModule
   ],
   exports: [
     StudentSideMenuComponent
