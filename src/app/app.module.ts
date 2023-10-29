@@ -113,6 +113,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
+import { EnseignantHomePageComponent } from './enseignant-home-page/enseignant-home-page.component';
+import { EnseignantSideMenuComponent } from './enseignant-side-menu/enseignant-side-menu.component';
 
 @NgModule({
   declarations: [
@@ -128,6 +130,8 @@ import { StudentTestOrientationComponent } from './student-test-orientation/stud
     StudentOrientationFormComponent,
     EvaluationComponent,
     StudentTestOrientationComponent,
+    EnseignantHomePageComponent,
+    EnseignantSideMenuComponent,
   ],
   imports: [
     InputTextModule,
@@ -245,7 +249,8 @@ import { StudentTestOrientationComponent } from './student-test-orientation/stud
     MatButtonModule
   ],
   exports: [
-    StudentSideMenuComponent
+    StudentSideMenuComponent,
+    EnseignantSideMenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
