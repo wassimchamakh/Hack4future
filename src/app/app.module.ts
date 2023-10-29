@@ -103,7 +103,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.component';
 import { OrientationComponent } from './orientation/orientation.component';
 import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
-
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -218,7 +218,12 @@ import { StudentOrientationFormComponent } from './student-orientation-form/stud
     AnimateModule,
     CardModule,
     PanelMenuModule,
-    FullCalendarModule
+    FullCalendarModule,
+    MatCardModule,
+    DropdownModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastModule
   ],
   exports: [
     StudentSideMenuComponent
