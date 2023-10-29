@@ -102,6 +102,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.component';
 import { OrientationComponent } from './orientation/orientation.component';
+import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
 
 @NgModule({
   declarations: [
@@ -114,6 +115,7 @@ import { OrientationComponent } from './orientation/orientation.component';
     HomeStudentComponent,
     StudentSideMenuComponent,
     OrientationComponent,
+    StudentOrientationFormComponent,
   ],
   imports: [
     InputTextModule,

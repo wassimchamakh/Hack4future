@@ -3,12 +3,12 @@
         <svg class="bi me-2" width="40" height="32">
             <use xlink:href="#bootstrap"></use>
         </svg>
-        <span class="fs-4">Sidebar</span>
+        <img src="../../assets/photos/nanjah logo white.png" alt="" width="200">
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">
+            <a [routerLink]="['/student/home']" class="nav-link text-white {{activeRoute=='student/home'?classActive:''}}" aria-current="page">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#home"></use>
                 </svg>
@@ -16,12 +16,13 @@
             </a>
         </li>
         <li>
-            <a routerLink="/student/test" class="nav-link text-white">
+            <a routerLink="/student/test" class="nav-link text-white {{activeRoute=='student/test'?classActive:''}}">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#orientation"></use>
                 </svg>
-                Dashboard
+
             </a>
+
         </li>
         <li>
             <a href="#" class="nav-link text-white">
@@ -40,11 +41,11 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a [routerLink]="['/student/orientation']" class="nav-link text-white {{activeRoute=='student/orientation'?classActive:''}}">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#people-circle"></use>
                 </svg>
-                Customers
+                Orientation
             </a>
         </li>
     </ul>

@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { OrientationComponent } from './orientation/orientation.component';
+import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,11 @@ const routes: Routes = [
     component: HomeStudentComponent
   },
   {path:'student/test',
-component : OrientationComponent}
+component : OrientationComponent},
+  {
+    path:'student/orientation',
+    component: StudentOrientationFormComponent
+  }
 ];
 
 @NgModule({
