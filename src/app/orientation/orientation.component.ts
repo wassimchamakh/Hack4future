@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { SelectItem } from 'primeng/api';
 import { DataView } from 'primeng/dataview';
+import {FormBuilder, Validators, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-orientation',
@@ -259,8 +260,13 @@ export class OrientationComponent implements OnInit {
 
     counterValue:any=0
     reponse: any[] = [{id:1,rep:'Reponse 1'}, {id:2,rep:'Reponse 2'}, {id:3,rep:'Reponse 3'}, {id:4,rep:'Reponse 4'}];
-
-    constructor() { }
+    firstFormGroup = this._formBuilder.group({
+        firstCtrl: ['', Validators.required],
+      });
+      secondFormGroup = this._formBuilder.group({
+        secondCtrl: ['', Validators.required],
+      });
+    constructor(private _formBuilder: FormBuilder) { }
 
     ngOnInit() {
         //this.productService.getProducts().then(data => this.products = data);

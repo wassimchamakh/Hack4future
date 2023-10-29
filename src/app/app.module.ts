@@ -106,6 +106,8 @@ import { StudentOrientationFormComponent } from './student-orientation-form/stud
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -228,7 +230,9 @@ import {MatRadioModule} from '@angular/material/radio';
     ReactiveFormsModule,
     ToastModule,
     MatProgressSpinnerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatStepperModule,
+    MatButtonModule
   ],
   exports: [
     StudentSideMenuComponent

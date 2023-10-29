@@ -36,13 +36,46 @@
     </div>
 
     <div *ngIf="counterValue>4">
-        <div >
-            <h4>Question 1: option?</h4>
-            <mat-radio-group aria-label="Select an option"   class="example-radio-group grid">
-                <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="rep.id">{{rep.rep}}</mat-radio-button>
-            </mat-radio-group>
-        </div>
+      
 
+    
+        <mat-stepper linear #stepper>
+            <mat-step  [editable]="false">
+                <ng-template matStepLabel>Question 1: option?</ng-template>
+                <div >
+                    <h4>Question 1: option?</h4>
+                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid">
+                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="rep.id">{{rep.rep}}</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step  [editable]="false">
+                <ng-template matStepLabel>Question 2: options wich one?</ng-template>
+                <div >
+                    <h4>Question 1: option?</h4>
+                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid">
+                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="rep.id">{{rep.rep}}</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Done</ng-template>
+              <p>You are now done.</p>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+              </div>
+            </mat-step>
+          </mat-stepper>
+    
     </div>
     
+
 </p-dialog>
