@@ -18,7 +18,7 @@
                             </div>
                             <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
                                 
-                                <button pButton pRipple label="Démarrer" class="md:align-self-end mb-2" icon="pi pi-play" [disabled]="product.inventoryStatus === 'INDISPONIBLE'"></button>
+                                <button pButton pRipple label="Démarrer" class="md:align-self-end mb-2" icon="pi pi-play" [disabled]="product.inventoryStatus === 'INDISPONIBLE'" (click)="demarrer(product.id)"></button>
                             </div>
                         </div>
                     </div>
@@ -28,3 +28,21 @@
     </div>
 </div>
 </div>
+
+<p-dialog header="Header" [(visible)]="visible" [style]="{width: '50vw'}">
+    <div *ngIf="counterValue <4">
+        <h2>Le test va commencer en quelque seconde</h2>
+        <mat-spinner ></mat-spinner>
+    </div>
+
+    <div *ngIf="counterValue>4">
+        <div >
+            <h4>Question 1: option?</h4>
+            <mat-radio-group aria-label="Select an option"   class="example-radio-group grid">
+                <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="rep.id">{{rep.rep}}</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+    </div>
+    
+</p-dialog>

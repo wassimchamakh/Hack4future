@@ -1,4 +1,7 @@
+import { NgFor } from '@angular/common';
 import { Component , OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 import { SelectItem } from 'primeng/api';
 import { DataView } from 'primeng/dataview';
 
@@ -7,7 +10,8 @@ import { DataView } from 'primeng/dataview';
   templateUrl: './orientation.component.html',
   styleUrls: ['./orientation.component.scss']
 })
-export class OrientationComponent  {
+export class OrientationComponent implements OnInit {
+    visible:boolean=false
     layout: string ='list';
     products= [
       {
@@ -253,15 +257,23 @@ export class OrientationComponent  {
           rating: 4
       }];
 
-    
+    counterValue:any=0
+    reponse: any[] = [{id:1,rep:'Reponse 1'}, {id:2,rep:'Reponse 2'}, {id:3,rep:'Reponse 3'}, {id:4,rep:'Reponse 4'}];
 
     constructor() { }
 
     ngOnInit() {
         //this.productService.getProducts().then(data => this.products = data);
+    
     }
         getSeverity() {
           return "";
       };
-    
+      demarrer(id: any){
+        this.visible=!this.visible
+        setInterval(() => {
+            this.counterValue++
+        }, 1000)
+        this.counterValue=0
+      }
 }

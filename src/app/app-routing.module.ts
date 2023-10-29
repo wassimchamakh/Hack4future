@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'student/home',
     component: HomeStudentComponent
   },
-  {path:'student/test',
+  {path:'student/test/competance',
 component : OrientationComponent},
   {
     path:'student/orientation',
