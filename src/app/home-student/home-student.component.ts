@@ -8,6 +8,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
   styleUrls: ['./home-student.component.scss']
 })
 export class HomeStudentComponent {
+  absentDetail:any
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin,timeGridPlugin],
@@ -38,5 +39,9 @@ export class HomeStudentComponent {
       right: 'timeGridWeek,timeGridDay' // user can switch between the two
     }
   };
-  
+  visibleNotif:boolean=false
+  showNotif(){
+    this.absentDetail = localStorage.getItem('absent')
+    this.visibleNotif=true
+  }
 }

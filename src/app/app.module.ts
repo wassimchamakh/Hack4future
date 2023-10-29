@@ -122,6 +122,8 @@ import { AdministrationHomeComponent } from './administration-home/administratio
 import { ChartModule } from 'primeng/chart';
 import { AdminSideMenuComponent } from './admin-side-menu/admin-side-menu.component';
 import { AdministrationCalendrierComponent } from './administration-calendrier/administration-calendrier.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -146,6 +148,7 @@ import { AdministrationCalendrierComponent } from './administration-calendrier/a
     AdministrationCalendrierComponent,
   ],
   imports: [
+    MatIconModule,
     InputTextModule,
     CheckboxModule,
     RadioButtonModule,
@@ -260,7 +263,8 @@ import { AdministrationCalendrierComponent } from './administration-calendrier/a
     MatStepperModule,
     MatButtonModule,
     MatCheckboxModule,
-    ChartModule
+    ChartModule,
+    MatBadgeModule
   ],
   exports: [
     StudentSideMenuComponent,

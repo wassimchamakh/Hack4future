@@ -10,10 +10,18 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 <div class="grid">
     <app-student-side-menu></app-student-side-menu>
     <div class="col">
+        <button style="position: relative; top: 3%; float: right;" mat-icon-button aria-label="Example icon button with a vertical three dot icon"  matBadge="1" matBadgePosition="before" matBadgeColor="accent"
+        (click)="showNotif()">
+            <mat-icon>notification_important</mat-icon>
+        </button>
         <div class="calendar">
-            <full-calendar [options]="calendarOptions"></full-calendar>
+            <full-calendar  [options]="calendarOptions"></full-calendar>
         </div>
     </div>
 </div>
 
+<p-dialog header="Liste notifcation" [(visible)]="visibleNotif" [style]="{width: '50vw'}">
 
+    <h3>--------------------------------------------------------------------</h3>
+    <h3>{{absentDetail}}</h3>
+</p-dialog>

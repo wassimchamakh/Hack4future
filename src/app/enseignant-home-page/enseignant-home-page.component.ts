@@ -65,6 +65,7 @@ export class EnseignantHomePageComponent {
 
   marquerAbsent(){
     this.event.event.setProp('backgroundColor','red')
+    localStorage.setItem('absent','Cours Math annulé le 2023-10-30T09:00:00 ')
     this.visible = ! this.visible
   }
 

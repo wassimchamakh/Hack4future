@@ -1,36 +1,69 @@
+@import '../../styles.scss';
+
+// .bg-home-page{
+//     width: 100%;
+// }
+// h1 {
+//     color: rgb(17, 16, 16);
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     font-weight: bolder;
+// }
+a {
+    text-decoration: none !important;
+}
+footer {
+    background-color: rgb(45, 45, 46);
+    color: white !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    height: 40% !important;
+    // #contact{
+    //     align-items: center;
+    //     text-align: center;
+    //     margin: 0 auto;
+    //     width: 50% !important;
+    //     padding: 20px 0;
+    //     .input-group{
+    //         border-radius: 5px;
+    //         margin-bottom: 2px;
+    //         background-color: white;
+    //     }
+    //     .textarea{
+    //         margin-top: 5px;
+    //     }
+
+    //     button {
+    //         margin-top: 10px;
+    //         width: 80px;
+    //     }
+    // }
+
+}
+.menu{
+    text-align: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    text-decoration: none !important;
+    a{
+        text-decoration: none !important;
+    }
+}
 .bg-home-page{
     width: 100%;
 }
-h1 {
-    color: rgb(17, 16, 16);
-    position: absolute;
-    top: 50%;
-    left: 50%;
+
+.propos{
+    height: 20vh !important;
+    background-color: $first-color;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
     font-weight: bolder;
-}
-
-footer {
-    background-color: rgb(46, 45, 45);
-
-    #contact{
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-        width: 50% !important;
-        padding: 20px 0;
-        .input-group{
-            border-radius: 5px;
-            margin-bottom: 2px;
-            background-color: white;
-        }
-        .textarea{
-            margin-top: 5px;
-        }
-
-        button {
-            margin-top: 10px;
-            width: 80px;
-        }
+    h2,p{
+        font-weight: bolder;
+        padding: 10px 10px !important;
     }
-
 }

@@ -1,35 +1,75 @@
-<app-navbar></app-navbar>
-<div>
-    <h1>BE DIGITAL BE SMART</h1>
+<p-toast></p-toast>
 
-    <img class="bg-home-page"
-        src="../assets/photos/amused-pretty-girl-demonstrate-blank-digital-tablet-screen-smiling-excited-camera-showing-awe_1258-1.jpg"
-        alt="">
-</div>
-<footer>
-    <div id="contact">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">@</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-          </div>
+<div id="home" class="landing-wrapper overflow-hidden">
+  <div
+    class="py-4 px-4 mx-0 md:mx-6 lg:mx-8 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3">
+    <a class="flex align-items-center" href="#">
+      <img src="../../assets/photos/Nanjah logo.png" alt="" height="50" class="mr-0 lg:mr-2">
+    </a>
+    <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden"
+      leaveToClass="hidden">
+      <i class="pi pi-bars text-4xl"></i>
+    </a>
+    <div
+      class="align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2"
+      style="top:120px">
+      <ul class="list-none menu p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
+        <li>
+          <a class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#apropos" class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+            <span>About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
+            <span>Contact</span>
+          </a>
+        </li>
 
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="">First and last name</span>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-          
-          <div class="input-group textarea">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Message</span>
-            </div>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-          </div>
-          <button type="button" class="btn btn-primary">Send</button>
+
+      </ul>
+      <div
+        class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
+        <a [routerLink]="['/login']" pButton pRipple label="Login"
+          class="p-button-text p-button-rounded border-none font-light line-height-2 text-blue-500"></a>
+        <a [routerLink]="['/sign-up']" pButton pRipple label="Register"
+          class="p-button-rounded border-none ml-5 font-light line-height-2 bg-blue-500 text-white"></a>
+      </div>
+    </div>
+  </div>
+  <img src="../../assets/photos/Artboard 1.png" alt="" class="bg-home-page">
+  <div class="propos" id="apropos">
+    <h2>A propos l'equipe</h2>
+    <p>Notre équipe, composée de trois membres, est unie par une mission commune : améliorer l'éducation en Tunisie grâce à notre expertise en développement, design et marketing. Wassim Chamakh, Dhia Jlif et Wassim Ghommidh travaillent ensemble pour réaliser cette vision éducative</p>
+  </div>
+  <footer id="contact">
+    <div style="width: 50% !important; margin: 0 auto !important; padding-top: 20px !important;">
+      <div class="grid"> 
+        <div class="flex flex-column gap-2 col">
+          <label htmlFor="username">Nom</label>
+          <input pInputText id="username" aria-describedby="username-help" />
+        </div>
+        <div class="flex flex-column gap-2 col">
+          <label htmlFor="username">Prenom</label>
+          <input pInputText id="username" aria-describedby="username-help" />
+        </div>
+        <div class="flex flex-column gap-2 col-12">
+          <label htmlFor="username">Email</label>
+          <input pInputText id="username" aria-describedby="username-help" />
+        </div>
+        <div class="col-12">
+          <textarea rows="10" cols="98" pInputTextarea ></textarea>
+
+        </div>
+      </div>
+      <div style="padding-bottom: 10px;">
+        <p-button label="Send" class="send-presence" (click)="sendMessage()" ></p-button>
+      </div>
 
     </div>
 
-</footer>
+  </footer>
