@@ -44,8 +44,9 @@
                 <ng-template matStepLabel>Question 1: option?</ng-template>
                 <div >
                     <h4>Question 1: option?</h4>
-                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid">
-                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="rep.id">{{rep.rep}}</mat-radio-button>
+                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid"   [(ngModel)]="rep1">
+                        >
+                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="{{rep.id}}">{{rep.rep}}</mat-radio-button>
                     </mat-radio-group>
                 </div>
                 <div>
@@ -56,8 +57,9 @@
                 <ng-template matStepLabel>Question 2: options wich one?</ng-template>
                 <div >
                     <h4>Question 1: option?</h4>
-                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid">
-                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="rep.id">{{rep.rep}}</mat-radio-button>
+                    <mat-radio-group aria-label="Select an option"   class="example-radio-group grid"   [(ngModel)]="rep2">
+                        >
+                        <mat-radio-button class="example-radio-button col-12" *ngFor="let rep of reponse" value="{{rep.id}}">{{rep.rep}}</mat-radio-button>
                     </mat-radio-group>
                 </div>
                 <div>
@@ -67,10 +69,20 @@
             </mat-step>
             <mat-step>
               <ng-template matStepLabel>Done</ng-template>
-              <p>You are now done.</p>
+              <p>Test terminé</p>
+              <button mat-button (click)="getResult()">resultat</button>
+              <div *ngIf="resultVisibile">
+                <mat-progress-spinner
+                class="example-margin"
+                [color]="color"
+                [mode]="mode"
+                [value]="result">
+            </mat-progress-spinner>
+            <h3>vous avez comme resultat: {{result}}</h3> 
+              </div>
+
               <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button (click)="stepper.reset()">Reset</button>
+                <button mat-button (click)="close()">Close</button>
               </div>
             </mat-step>
           </mat-stepper>

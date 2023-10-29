@@ -27,16 +27,16 @@
                 </svg>Test Compétance</a></li>
                 <li><a [routerLink]="['/student/test/orientation']" class="text-white rounded {{activeRoute=='student/test/orientation'?classActive:''}}"> <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#orientation"></use>
-                </svg>Test Crientation</a></li>
+                </svg>Test Orientation</a></li>
               </ul>
             </div>
           </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a [routerLink]="['/student/evaluation']" class="nav-link text-white {{activeRoute=='student/evaluation'?classActive:''}}">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#table"></use>
                 </svg>
-                Orders
+                Evaluation Cours 
             </a>
         </li>
         <li>
@@ -44,7 +44,7 @@
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#grid"></use>
                 </svg>
-                Products
+                Absence
             </a>
         </li>
         <li>

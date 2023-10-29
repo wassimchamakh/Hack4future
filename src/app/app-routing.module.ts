@@ -6,6 +6,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { OrientationComponent } from './orientation/orientation.component';
 import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
+import { EvaluationComponent } from './evaluation/evaluation.component';
+import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
 
 const routes: Routes = [
   {
@@ -27,7 +29,16 @@ component : OrientationComponent},
   {
     path:'student/orientation',
     component: StudentOrientationFormComponent
+  },
+  {
+    path:'student/evaluation',
+    component: EvaluationComponent 
+  } , 
+  {
+    path:'student/test/orientation',
+    component: StudentTestOrientationComponent 
   }
+
 ];
 
 @NgModule({

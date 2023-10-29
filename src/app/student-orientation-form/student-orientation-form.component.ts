@@ -31,6 +31,5 @@ export class StudentOrientationFormComponent implements OnInit{
   send(){
     console.log("test");
     this.messageService.add({ severity: 'success', summary: 'Success', detail: 'votre orientation a été enregistrés avec succés' });
-
   }
 }

@@ -104,10 +104,15 @@ import { StudentSideMenuComponent } from './student-side-menu/student-side-menu.
 import { OrientationComponent } from './orientation/orientation.component';
 import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
 import {MatCardModule} from '@angular/material/card';
+import { EvaluationComponent } from './evaluation/evaluation.component';
+import { MatFormFieldModule } from '@angular/material/form-field'; // Add this line
+import { MatInputModule } from '@angular/material/input'; // If you are using mat-input
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatRadioModule} from '@angular/material/radio';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
+import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +126,8 @@ import {MatButtonModule} from '@angular/material/button';
     StudentSideMenuComponent,
     OrientationComponent,
     StudentOrientationFormComponent,
+    EvaluationComponent,
+    StudentTestOrientationComponent,
   ],
   imports: [
     InputTextModule,
@@ -229,6 +236,9 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     ToastModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
     MatProgressSpinnerModule,
     MatRadioModule,
     MatStepperModule,
