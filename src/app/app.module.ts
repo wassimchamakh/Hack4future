@@ -113,6 +113,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
+import { TravailComponent } from './travail/travail.component';
 
 @NgModule({
   declarations: [
@@ -128,6 +129,7 @@ import { StudentTestOrientationComponent } from './student-test-orientation/stud
     StudentOrientationFormComponent,
     EvaluationComponent,
     StudentTestOrientationComponent,
+    TravailComponent,
   ],
   imports: [
     InputTextModule,

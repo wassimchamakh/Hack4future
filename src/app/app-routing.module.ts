@@ -8,6 +8,7 @@ import { OrientationComponent } from './orientation/orientation.component';
 import { StudentOrientationFormComponent } from './student-orientation-form/student-orientation-form.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { StudentTestOrientationComponent } from './student-test-orientation/student-test-orientation.component';
+import { TravailComponent } from './travail/travail.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ component : OrientationComponent},
   {
     path:'student/test/orientation',
     component: StudentTestOrientationComponent 
+  },
+  {
+    path:'student/travail',
+    component: TravailComponent
   }
 
 ];
